@@ -10,7 +10,6 @@
     <meta content="telephone=no" name="format-detection"/>
     <meta name="HandheldFriendly" content="true"/>
     <meta name="msapplication-TileColor" content="#003087"/>
-    <meta name="msapplication-config" content=""/>
     <meta name="theme-color" content="#003087"/>
     
     <!-- Google Fonts -->
@@ -18,7 +17,8 @@
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Inter:ital,wght@0,100;0,200;0,300;0,400;0,500;0,700;1,300;1,400;1,500&amp;display=swap"/>
     <link rel="stylesheet" type="text/css" href="css/vendor.css"/>
     <link rel="stylesheet" type="text/css" href="css/main.css"/>
-    <!-- favicons -->
+    
+    <!-- Favicons -->
     <link rel="apple-touch-icon" sizes="180x180" href="img/content/apple-touch-icon.png"/>
     <link rel="icon" type="image/png" sizes="32x32" href="img/content/favicon-32x32.png"/>
     <link rel="icon" type="image/png" sizes="16x16" href="img/content/favicon-16x16.png"/>
@@ -27,8 +27,6 @@
     <link rel="shortcut icon" href="img/content/favicon.ico"/>
     <link rel="shortcut icon" href="https://www.priyankaghosh.com/favicon.ico" sizes="16x16" title="Favicon" type="image/vnd.microsoft.icon"/>
     <link rel="icon" type="image/x-icon" href="https://www.priyankaghosh.com/favicon.ico"/>
-    <meta name="msapplication-TileColor" content="#003087"/>
-    <meta name="msapplication-config" content=""/>
     <meta name="robots" content="all"/>
     
     <meta name="description" content="Priyanka Ghosh is an experienced Instructional Designer based in Bengaluru, India, with over 6 years of expertise in eLearning, curriculum development, and LMS management."/>
@@ -42,361 +40,377 @@
     <meta name="twitter:title" content="Priyanka Ghosh"/>
     <meta name="twitter:description" content="Priyanka Ghosh is an experienced Instructional Designer based in Bengaluru, India, with over 6 years of expertise in eLearning, curriculum development, and LMS management."/>
     <meta name="twitter:image" content="img/twitter.jpg"/>
+
+    <!-- Inline CSS for tooltip -->
+    <style>
+        .contact-tooltip {
+            position: relative;
+            display: inline-block;
+            cursor: pointer;
+        }
+
+        .contact-tooltip .tooltip-text {
+            visibility: hidden;
+            width: 300px; /* Increased width to prevent text cutoff */
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            border-radius: 6px;
+            padding: 15px;
+            position: absolute;
+            z-index: 1000; /* Higher z-index to ensure visibility */
+            bottom: 150%; /* Position above the text with more space */
+            left: 50%;
+            transform: translateX(-50%);
+            opacity: 0;
+            transition: opacity 0.3s, visibility 0.3s;
+            white-space: nowrap; /* Prevent text wrapping */
+            font-size: 14px; /* Adjust font size for better readability */
+        }
+
+        .contact-tooltip:hover .tooltip-text {
+            visibility: visible;
+            opacity: 1;
+        }
+    </style>
 </head>
+
 <body>
-  
     <div data-barba="wrapper">
-      
-      <!-- PAGE HEADER -->
-      <header class="header header_fixed container-fluid js-header-sticky" id="page-header" data-arts-theme-text="light" data-arts-header-sticky-theme="bg-dark-3" data-arts-header-logo="primary" data-arts-header-sticky-logo="primary" data-arts-header-sticky-theme-text="light" data-arts-header-overlay-theme-text="light">
-        <!-- top bar -->
-        <div class="header__container header__controls">
-          <div class="row justify-content-between align-items-center">
-            <!-- logo -->
-            <div class="col-auto header__col header__col-left"><a class="logo" href="index.html">
-                <div class="logo__wrapper-img">
-                  <!-- primary logo version (for light backgrounds)--><img class="logo__img-primary" src="img/general/logo/vilmarfernandes_1.svg" alt="Priyanka Ghosh" width="47" height="14"/>
-                </div></a>
+        <!-- PAGE HEADER -->
+        <header class="header header_fixed container-fluid js-header-sticky" id="page-header" data-arts-theme-text="light" data-arts-header-sticky-theme="bg-dark-3" data-arts-header-logo="primary" data-arts-header-sticky-logo="primary" data-arts-header-sticky-theme-text="light" data-arts-header-overlay-theme-text="light">
+            <div class="header__container header__controls">
+                <div class="row justify-content-between align-items-center">
+                    <!-- logo -->
+                    <div class="col-auto header__col header__col-left">
+                        <a class="logo" href="index.html">
+                            <div class="logo__wrapper-img">
+                                <img class="logo__img-primary" src="img/general/logo/vilmarfernandes_1.svg" alt="Priyanka Ghosh" width="47" height="14"/>
+                            </div>
+                        </a>
+                    </div>
+                    <!-- desktop menu -->
+                    <div class="col-auto header__col d-none d-lg-block">
+                        <ul class="menu js-menu">
+                            <li><a href="index.html">Work</a></li>
+                            <li><a href="about.html">About</a></li> 
+                            <li><a href="mailto:priyanka.ghosh0802@gmail.com">priyanka.ghosh0802@yahoo.com</a></li>
+                        </ul>
+                    </div>
+                    <!-- mobile menu -->
+                    <div class="col-auto header__col d-flex align-items-center d-lg-none">
+                        <div>
+                            <ul class="menu js-menu">
+                                <li><a href="index.html">Work</a></li>
+                                <li><a href="about.html">About</a></li> 
+                            </ul>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <!-- - logo -->
-            <!-- desktop menu-->
-            <div class="col-auto header__col d-none d-lg-block">
-              <ul class="menu js-menu">
-                <li><a href="index.html">Work</a></li>
-                <li><a href="about.html">About</a></li> 
-                 <li><a href="mailto:priyanka.ghosh0802@gmail.com">priyanka.ghosh0802@gmail.com</a></li>
-              </ul>
-            </div>
-            <!-- - desktop menu -->
-            <!-- menu mobile-->
-            <div class="col-auto header__col d-flex align-items-center d-lg-none">
-              <div>
-                <ul class="menu js-menu">
-                  <li><a href="index.html">Work</a></li>
-                  <li><a href="about.html">About</a></li> 
-                </ul>
-              </div>
-            </div>
-            <!-- - menu mobile -->
-          </div>
+        </header>
+        <!-- PAGE MAIN CONTAINER -->
+        <div class="js-smooth-scroll" id="page-wrapper" data-barba="container">
+            <main class="page-wrapper__content">
+                <section class="section bg-portfolio-2" data-arts-theme-text="light">
+                    <!-- MASTHEAD -->
+                    <section class="section section-masthead text-center pt-xlarge bg-portfolio-2" data-arts-os-animation="true" data-arts-theme-text="light">
+                    </section>
+                    <!-- CONTENT -->
+                    <section class="section section-content section-awards bg-dark-3 pb-large" data-arts-theme-text="light">
+                        <div class="container">
+                            <div class="row section-content__wrapper-item py-4" data-arts-os-animation="true" data-arts-os-animation-name="animateText">
+                                <div class="section-content__divider"></div>
+                                <div class="col-lg-6">
+                                    <div class="section-content__content content mb-2 js-arts-split-text arts-split-text" data-arts-split-text="lines" data-arts-split-text-set="lines" data-arts-split-text-overflow-wrap="lines">
+                                        <div class="h2">Thanks for visiting</div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="section-content__content content js-arts-split-text arts-split-text" data-arts-split-text="lines" data-arts-split-text-set="lines" data-arts-split-text-overflow-wrap="lines">
+                                        <p>Priyanka is a Bengaluru-based Instructional Designer with over 6 years of experience in creating engaging eLearning solutions, curriculum development, and LMS management, with a focus on human-centered learning design.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><br><br><br><br><br><br>
+                        <div class="section-content__content content js-arts-split-text arts-split-text container" data-arts-os-animation="true" data-arts-os-animation-name="animateText" data-arts-split-text="lines" data-arts-split-text-set="lines" data-arts-split-text-overflow-wrap="lines">
+                            <h2 class="h2 mb-lg-0 mb-3">Achievements</h2><br><br>
+                        </div>
+                        <div class="container">
+                            <div class="row section-content__wrapper-item py-4" data-arts-os-animation="true" data-arts-os-animation-name="animateText">
+                                <div class="section-content__divider"></div>
+                                <div class="col-lg-6">
+                                    <div class="section-content__content content mb-2 js-arts-split-text arts-split-text" data-arts-split-text="lines" data-arts-split-text-set="lines" data-arts-split-text-overflow-wrap="lines">
+                                        <div class="h5">Recognition</div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div>
+                                        <a href="#" target="_blank" class="section-content__content content js-arts-split-text arts-split-text" data-arts-split-text="lines" data-arts-split-text-set="lines" data-arts-split-text-overflow-wrap="lines">
+                                            <p>Spot Card - Transitioned retail training to online format</p>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row section-content__wrapper-item py-4" data-arts-os-animation="true" data-arts-os-animation-name="animateText">
+                                <div class="section-content__divider"></div>
+                                <div class="col-lg-6">
+                                    <div class="section-content__content content mb-2 js-arts-split-text arts-split-text" data-arts-split-text="lines" data-arts-split-text-set="lines" data-arts-split-text-overflow-wrap="lines">
+                                        <div class="h5">Achievement</div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div>
+                                        <a href="#" target="_blank" class="section-content__content content js-arts-split-text arts-split-text" data-arts-split-text="lines" data-arts-split-text-set="lines" data-arts-split-text-overflow-wrap="lines">
+                                            <p>Developed 8 eLearning modules for compliance in 4 months at Hudson's Bay</p>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row section-content__wrapper-item py-4" data-arts-os-animation="true" data-arts-os-animation-name="animateText">
+                                <div class="section-content__divider"></div>
+                                <div class="col-lg-6">
+                                    <div class="section-content__content content mb-2 js-arts-split-text arts-split-text" data-arts-split-text="lines" data-arts-split-text-set="lines" data-arts-split-text-overflow-wrap="lines">
+                                        <div class="h5">Award</div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div>
+                                        <a href="#" target="_blank" class="section-content__content content js-arts-split-text arts-split-text" data-arts-split-text="lines" data-arts-split-text-set="lines" data-arts-split-text-overflow-wrap="lines">
+                                            <p>“Power Performer” at Accenture for assessment method revamp</p>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row section-content__wrapper-item py-4" data-arts-os-animation="true" data-arts-os-animation-name="animateText">
+                                <div class="section-content__divider"></div>
+                                <div class="col-lg-6">
+                                    <div class="section-content__content content mb-2 js-arts-split-text arts-split-text" data-arts-split-text="lines" data-arts-split-text-set="lines" data-arts-split-text-overflow-wrap="lines">
+                                        <div class="h5">Leadership</div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div>
+                                        <a href="#" target="_blank" class="section-content__content content js-arts-split-text arts-split-text" data-arts-split-text="lines" data-arts-split-text-set="lines" data-arts-split-text-overflow-wrap="lines">
+                                            <p>Leading the content and the platform team in the process of deploying the new LMS, at Hudson's bay.</p>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row section-content__wrapper-item py-4" data-arts-os-animation="true" data-arts-os-animation-name="animateText">
+                                <div class="section-content__divider"></div>
+                                <div class="col-lg-6">
+                                    <div class="section-content__content content mb-2 js-arts-split-text arts-split-text" data-arts-split-text="lines" data-arts-split-text-set="lines" data-arts-split-text-overflow-wrap="lines">
+                                        <div class="h5">Sports</div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div>
+                                        <a href="#" target="_blank" class="section-content__content content js-arts-split-text arts-split-text" data-arts-split-text="lines" data-arts-split-text-set="lines" data-arts-split-text-overflow-wrap="lines">
+                                            <p>Gold Medalist in District Powerlifting Championship</p>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><br><br><br><br>
+                        <div class="section-content__content content js-arts-split-text arts-split-text container" data-arts-os-animation="true" data-arts-os-animation-name="animateText" data-arts-split-text="lines" data-arts-split-text-set="lines" data-arts-split-text-overflow-wrap="lines">
+                            <h2 class="h2 mb-lg-0 mb-3">Experience</h2><br><br>
+                        </div>
+                        <div class="container">
+                            <div class="row section-content__wrapper-item py-4" data-arts-os-animation="true" data-arts-os-animation-name="animateText">
+                                <div class="section-content__divider"></div>
+                                <div class="col-lg-6">
+                                    <div class="section-content__content content mb-2 js-arts-split-text arts-split-text" data-arts-split-text="lines" data-arts-split-text-set="lines" data-arts-split-text-overflow-wrap="lines">
+                                        <div class="h5">Current</div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div>
+                                        <a href="#" target="_blank" class="section-content__content content js-arts-split-text arts-split-text" data-arts-split-text="lines" data-arts-split-text-set="lines" data-arts-split-text-overflow-wrap="lines">
+                                            <p>Instructional Design Analyst, Accenture, Bangalore (Dec 2022 - Present)</p>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row section-content__wrapper-item py-4" data-arts-os-animation="true" data-arts-os-animation-name="animateText">
+                                <div class="section-content__divider"></div>
+                                <div class="col-lg-6">
+                                    <div class="section-content__content content mb-2 js-arts-split-text arts-split-text" data-arts-split-text="lines" data-arts-split-text-set="lines" data-arts-split-text-overflow-wrap="lines">
+                                        <div class="h5">2021-2022</div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div>
+                                        <a href="#" target="_blank" class="section-content__content content js-arts-split-text arts-split-text" data-arts-split-text="lines" data-arts-split-text-set="lines" data-arts-split-text-overflow-wrap="lines">
+                                            <p>E-learning Specialist & LMS Analyst, Hudson's Bay Company, Bangalore</p>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row section-content__wrapper-item py-4" data-arts-os-animation="true" data-arts-os-animation-name="animateText">
+                                <div class="section-content__divider"></div>
+                                <div class="col-lg-6">
+                                    <div class="section-content__content content mb-2 js-arts-split-text arts-split-text" data-arts-split-text="lines" data-arts-split-text-set="lines" data-arts-split-text-overflow-wrap="lines">
+                                        <div class="h5">2020-2021</div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div>
+                                        <a href="#" target="_blank" class="section-content__content content js-arts-split-text arts-split-text" data-arts-split-text="lines" data-arts-split-text-set="lines" data-arts-split-text-overflow-wrap="lines">
+                                            <p>Capability Development Executive, Ample Technologies, Bangalore</p>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row section-content__wrapper-item py-4" data-arts-os-animation="true" data-arts-os-animation-name="animateText">
+                                <div class="section-content__divider"></div>
+                                <div class="col-lg-6">
+                                    <div class="section-content__content content mb-2 js-arts-split-text arts-split-text" data-arts-split-text="lines" data-arts-split-text-set="lines" data-arts-split-text-overflow-wrap="lines">
+                                        <div class="h5">2019-2020</div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div>
+                                        <a href="#" target="_blank" class="section-content__content content js-arts-split-text arts-split-text" data-arts-split-text="lines" data-arts-split-text-set="lines" data-arts-split-text-overflow-wrap="lines">
+                                            <p>Training Manager, Ordertrainings, Bangalore</p>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row section-content__wrapper-item py-4" data-arts-os-animation="true" data-arts-os-animation-name="animateText">
+                                <div class="section-content__divider"></div>
+                                <div class="col-lg-6">
+                                    <div class="section-content__content content mb-2 js-arts-split-text arts-split-text" data-arts-split-text="lines" data-arts-split-text-set="lines" data-arts-split-text-overflow-wrap="lines">
+                                        <div class="h5">2018-2019</div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div>
+                                        <a href="#" target="_blank" class="section-content__content content js-arts-split-text arts-split-text" data-arts-split-text="lines" data-arts-split-text-set="lines" data-arts-split-text-overflow-wrap="lines">
+                                            <p>Corporate Trainer, Oppo, Bangalore</p>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </section>
+            </main>
+            <!-- PAGE FOOTER -->
+            <footer class="footer pt-medium bg-portfolio-2" id="page-footer" data-arts-theme-text="light" data-arts-fixed-reveal="data-arts-fixed-reveal" data-arts-fixed-reveal-from="-20vh" data-arts-fixed-reveal-from-opacity="0">
+                <div class="footer__inner">
+                    <div class="container">
+                        <!-- widget area #1 [wide] -->
+                        <div class="row pb-md-3">
+                            <div class="col">
+                                <section class="widget widget_text">
+                                    <div class="textwidget">
+                                        <h3>Interested in collaboration or training opportunities?
+                                            <span class="contact-tooltip">
+                                                <a class="underline-hover-self" href="#">Contact me</a>
+                                                <span class="tooltip-text">
+                                                    Ph no: +91 8583064249<br>
+                                                    Email: priyanka.ghosh0802@yahoo.com
+                                                </span>
+                                            </span>
+                                        </h3>
+                                    </div>
+                                </section>
+                            </div>
+                        </div>
+                        <!-- widget area #2 [4 columns] -->
+                        <div class="row justify-content-between position-relative pt-md-5 pt-4 pb-md-3">
+                            <div class="footer__divider"></div>
+                            <div class="col-lg-3 col-sm-6">
+                                <section class="widget widget_nav_menu">
+                                    <h2 class="widgettitle">Connect with me</h2>
+                                    <div>
+                                        <ul class="menu">
+                                            <li class="menu-item"><a href="https://www.linkedin.com/in/priyankaghosh08/" target="_blank">LinkedIn</a></li>
+                                        </ul>
+                                    </div>
+                                </section>
+                            </div>
+                            <div class="col-lg-3 col-sm-6">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
         </div>
-        <!-- - top bar -->
-      </header>
-      <!-- - PAGE HEADER -->
-      <!-- PAGE MAIN CONTAINER -->
-      <div class="js-smooth-scroll" id="page-wrapper" data-barba="container">
-        
-        <!-- PAGE CONTENT -->
-        <main class="page-wrapper__content">
-          
-          <section class="section bg-portfolio-2" data-arts-theme-text="light">
-            <!-- section MASTHEAD -->
-            <section class="section section-masthead text-center pt-xlarge bg-portfolio-2" data-arts-os-animation="true" data-arts-theme-text="light">
-            </section>
-            <!-- - section MASTHEAD -->
-            <!-- section CONTENT -->
-            <section class="section section-content section-awards bg-dark-3 pb-large" data-arts-theme-text="light">
-              <div class="container">
-                <div class="row section-content__wrapper-item py-4" data-arts-os-animation="true" data-arts-os-animation-name="animateText">
-                  <div class="section-content__divider"></div>
-                  <div class="col-lg-6">
-                    <div class="section-content__content content mb-2 js-arts-split-text arts-split-text" data-arts-split-text="lines" data-arts-split-text-set="lines" data-arts-split-text-overflow-wrap="lines">
-                      <div class="h2">Thanks for visiting</div>
-                    </div>
-                  </div>
-                  <div class="col-lg-6">
-                    <div class="section-content__content content js-arts-split-text arts-split-text" data-arts-split-text="lines" data-arts-split-text-set="lines" data-arts-split-text-overflow-wrap="lines">
-                      <p>Priyanka is a Bengaluru-based Instructional Designer with over 6 years of experience in creating engaging eLearning solutions, curriculum development, and LMS management, with a focus on human-centered learning design.</p>
-                    </div>
-                  </div>
-                </div>
-              </div><br><br><br><br><br><br>
-              <div class="section-content__content content js-arts-split-text arts-split-text container" data-arts-os-animation="true" data-arts-os-animation-name="animateText" data-arts-split-text="lines" data-arts-split-text-set="lines" data-arts-split-text-overflow-wrap="lines">
-                <h2 class="h2 mb-lg-0 mb-3">Achievements</h2><br><br>
-              </div>
-              <div class="container">
-                <div class="row section-content__wrapper-item py-4" data-arts-os-animation="true" data-arts-os-animation-name="animateText">
-                  <div class="section-content__divider"></div>
-                  <div class="col-lg-6">
-                    <div class="section-content__content content mb-2 js-arts-split-text arts-split-text" data-arts-split-text="lines" data-arts-split-text-set="lines" data-arts-split-text-overflow-wrap="lines">
-                      <div class="h5">Recognition</div>
-                    </div>
-                  </div>
-                  <div class="col-lg-6">
-                    <div><a href="#" target="_blank" class="section-content__content content js-arts-split-text arts-split-text" data-arts-split-text="lines" data-arts-split-text-set="lines" data-arts-split-text-overflow-wrap="lines">
-                      <p>Spot Card - Transitioned retail training to online format</p></a>
-                    </div>
-                  </div>
-                </div>
-                <div class="row section-content__wrapper-item py-4" data-arts-os-animation="true" data-arts-os-animation-name="animateText">
-                  <div class="section-content__divider"></div>
-                  <div class="col-lg-6">
-                    <div class="section-content__content content mb-2 js-arts-split-text arts-split-text" data-arts-split-text="lines" data-arts-split-text-set="lines" data-arts-split-text-overflow-wrap="lines">
-                      <div class="h5">Achievement</div>
-                    </div>
-                  </div>
-                  <div class="col-lg-6">
-                    <div><a href="#" target="_blank" class="section-content__content content js-arts-split-text arts-split-text" data-arts-split-text="lines" data-arts-split-text-set="lines" data-arts-split-text-overflow-wrap="lines">
-                      <p>Developed 8 eLearning modules for compliance in 4 months at Hudson's Bay</p></a>
-                    </div>
-                  </div>
-                </div>
-                <div class="row section-content__wrapper-item py-4" data-arts-os-animation="true" data-arts-os-animation-name="animateText">
-                  <div class="section-content__divider"></div>
-                  <div class="col-lg-6">
-                    <div class="section-content__content content mb-2 js-arts-split-text arts-split-text" data-arts-split-text="lines" data-arts-split-text-set="lines" data-arts-split-text-overflow-wrap="lines">
-                      <div class="h5">Award</div>
-                    </div>
-                  </div>
-                  <div class="col-lg-6">
-                    <div><a href="#" target="_blank" class="section-content__content content js-arts-split-text arts-split-text" data-arts-split-text="lines" data-arts-split-text-set="lines" data-arts-split-text-overflow-wrap="lines">
-                      <p>“Power Performer” at Accenture for assessment method revamp</p></a>
-                    </div>
-                  </div>
-                </div>
-                <div class="row section-content__wrapper-item py-4" data-arts-os-animation="true" data-arts-os-animation-name="animateText">
-                  <div class="section-content__divider"></div>
-                  <div class="col-lg-6">
-                    <div class="section-content__content content mb-2 js-arts-split-text arts-split-text" data-arts-split-text="lines" data-arts-split-text-set="lines" data-arts-split-text-overflow-wrap="lines">
-                      <div class="h5">Leadership</div>
-                    </div>
-                  </div>
-                  <div class="col-lg-6">
-                    <div><a href="#" target="_blank" class="section-content__content content js-arts-split-text arts-split-text" data-arts-split-text="lines" data-arts-split-text-set="lines" data-arts-split-text-overflow-wrap="lines">
-                      <p>Led LMS deployment team at Accenture</p></a>
-                    </div>
-                  </div>
-                </div>
-                <div class="row section-content__wrapper-item py-4" data-arts-os-animation="true" data-arts-os-animation-name="animateText">
-                  <div class="section-content__divider"></div>
-                  <div class="col-lg-6">
-                    <div class="section-content__content content mb-2 js-arts-split-text arts-split-text" data-arts-split-text="lines" data-arts-split-text-set="lines" data-arts-split-text-overflow-wrap="lines">
-                      <div class="h5">Sports</div>
-                    </div>
-                  </div>
-                  <div class="col-lg-6">
-                    <div><a href="#" target="_blank" class="section-content__content content js-arts-split-text arts-split-text" data-arts-split-text="lines" data-arts-split-text-set="lines" data-arts-split-text-overflow-wrap="lines">
-                      <p>Gold Medalist in District Powerlifting Championship</p></a>
-                    </div>
-                  </div>
-                </div>
-              </div><br><br><br><br>
-              <div class="section-content__content content js-arts-split-text arts-split-text container" data-arts-os-animation="true" data-arts-os-animation-name="animateText" data-arts-split-text="lines" data-arts-split-text-set="lines" data-arts-split-text-overflow-wrap="lines">
-                <h2 class="h2 mb-lg-0 mb-3">Experience</h2><br><br>
-              </div>
-              <div class="container">
-                <div class="row section-content__wrapper-item py-4" data-arts-os-animation="true" data-arts-os-animation-name="animateText">
-                  <div class="section-content__divider"></div>
-                  <div class="col-lg-6">
-                    <div class="section-content__content content mb-2 js-arts-split-text arts-split-text" data-arts-split-text="lines" data-arts-split-text-set="lines" data-arts-split-text-overflow-wrap="lines">
-                      <div class="h5">Current</div>
-                    </div>
-                  </div>
-                  <div class="col-lg-6">
-                    <div><a href="#" target="_blank" class="section-content__content content js-arts-split-text arts-split-text" data-arts-split-text="lines" data-arts-split-text-set="lines" data-arts-split-text-overflow-wrap="lines">
-                      <p>Instructional Design Analyst, Accenture, Bangalore (Dec 2022 - Present)</p></a>
-                    </div>
-                  </div>
-                </div>
-                <div class="row section-content__wrapper-item py-4" data-arts-os-animation="true" data-arts-os-animation-name="animateText">
-                  <div class="section-content__divider"></div>
-                  <div class="col-lg-6">
-                    <div class="section-content__content content mb-2 js-arts-split-text arts-split-text" data-arts-split-text="lines" data-arts-split-text-set="lines" data-arts-split-text-overflow-wrap="lines">
-                      <div class="h5">2021-2022</div>
-                    </div>
-                  </div>
-                  <div class="col-lg-6">
-                    <div><a href="#" target="_blank" class="section-content__content content js-arts-split-text arts-split-text" data-arts-split-text="lines" data-arts-split-text-set="lines" data-arts-split-text-overflow-wrap="lines">
-                      <p>E-learning Specialist & LMS Analyst, Hudson's Bay Company, Bangalore</p></a>
-                    </div>
-                  </div>
-                </div>
-                <div class="row section-content__wrapper-item py-4" data-arts-os-animation="true" data-arts-os-animation-name="animateText">
-                  <div class="section-content__divider"></div>
-                  <div class="col-lg-6">
-                    <div class="section-content__content content mb-2 js-arts-split-text arts-split-text" data-arts-split-text="lines" data-arts-split-text-set="lines" data-arts-split-text-overflow-wrap="lines">
-                      <div class="h5">2020-2021</div>
-                    </div>
-                  </div>
-                  <div class="col-lg-6">
-                    <div><a href="#" target="_blank" class="section-content__content content js-arts-split-text arts-split-text" data-arts-split-text="lines" data-arts-split-text-set="lines" data-arts-split-text-overflow-wrap="lines">
-                      <p>Capability Development Executive, Ample Technologies, Bangalore</p></a>
-                    </div>
-                  </div>
-                </div>
-                <div class="row section-content__wrapper-item py-4" data-arts-os-animation="true" data-arts-os-animation-name="animateText">
-                  <div class="section-content__divider"></div>
-                  <div class="col-lg-6">
-                    <div class="section-content__content content mb-2 js-arts-split-text arts-split-text" data-arts-split-text="lines" data-arts-split-text-set="lines" data-arts-split-text-overflow-wrap="lines">
-                      <div class="h5">2019-2020</div>
-                    </div>
-                  </div>
-                  <div class="col-lg-6">
-                    <div><a href="#" target="_blank" class="section-content__content content js-arts-split-text arts-split-text" data-arts-split-text="lines" data-arts-split-text-set="lines" data-arts-split-text-overflow-wrap="lines">
-                      <p>Training Manager, Ordertrainings, Bangalore</p></a>
-                    </div>
-                  </div>
-                </div>
-                <div class="row section-content__wrapper-item py-4" data-arts-os-animation="true" data-arts-os-animation-name="animateText">
-                  <div class="section-content__divider"></div>
-                  <div class="col-lg-6">
-                    <div class="section-content__content content mb-2 js-arts-split-text arts-split-text" data-arts-split-text="lines" data-arts-split-text-set="lines" data-arts-split-text-overflow-wrap="lines">
-                      <div class="h5">2018-2019</div>
-                    </div>
-                  </div>
-                  <div class="col-lg-6">
-                    <div><a href="#" target="_blank" class="section-content__content content js-arts-split-text arts-split-text" data-arts-split-text="lines" data-arts-split-text-set="lines" data-arts-split-text-overflow-wrap="lines">
-                      <p>Corporate Trainer, Oppo, Bangalore</p></a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </section>
-            <!-- - section CONTENT -->
-            
-            <!-- section HEADER -->
-           
-            <!-- - section HEADER -->
-            
-          </section>
-           
-        </main>
-        <!-- PAGE FOOTER -->
-        <footer class="footer pt-medium bg-portfolio-2" id="page-footer" data-arts-theme-text="light" data-arts-fixed-reveal="data-arts-fixed-reveal" data-arts-fixed-reveal-from="-20vh" data-arts-fixed-reveal-from-opacity="0">
-          <div class="footer__inner">
-            <div class="container">
-              <!-- widget area #1 [wide] -->
-              <div class="row pb-md-3">
-                <div class="col">
-                  <section class="widget widget_text">
-                    <div class="textwidget"><h3>Interested in collaboration or training opportunities?<em></em><a class="underline-hover-self" href="cdn-cgi/l/email-protection.html#6e0e4a5e4b4e4a5e4b0e38474e4b47544a4b5448474c4d4b1c4d4143"><br>Contact me</a></h3></div>
-                  </section>
-                </div>
-              </div>
-              <!-- - widget area #1 [wide] -->
-              <!-- widget area #2 [4 columns] -->
-              <div class="row justify-content-between position-relative pt-md-5 pt-4 pb-md-3">
-                <div class="footer__divider"></div>
-                <div class="col-lg-3 col-sm-6">
-                  <section class="widget widget_nav_menu">
-                    <h2 class="widgettitle">Connect with me</h2>
-                    <div>
-                      <ul class="menu">
-                        <li class="menu-item"><a href="https://www.linkedin.com/in/priyankaghosh08/" target="_blank">LinkedIn</a></li>
-                        
-                      </ul>
-                    </div>
-                  </section>
-                </div>
-                <div class="col-lg-3 col-sm-6">
-                </div>
-              </div>
-              <!-- - widget area #2 [4 columns] -->
-            </div>
-          </div>
-        </footer>
-        <!-- - PAGE FOOTER -->
-        <!-- - PAGE CONTENT -->
-        <!-- PAGE FOOTER -->
-        <!-- - PAGE FOOTER -->
-      </div>
-      <!-- - PAGE MAIN CONTAINER -->
     </div>
-    <canvas id="js-webgl"></canvas>
+    
     <!-- Cursor Follower -->
     <div class="arts-cursor" id="js-arts-cursor">
-      <div class="arts-cursor__wrapper">
-        <!-- circles-->
-        <div class="arts-cursor__follower js-arts-cursor__follower">
-          <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-            <circle class="arts-cursor__stroke-inner js-arts-cursor__stroke-inner" cx="25" cy="25" r="24" style="opacity: 0.6;"></circle>
-            <circle class="arts-cursor__stroke-outer js-arts-cursor__stroke-outer" cx="25" cy="25" r="24" style="stroke-dashoffset: 252.327; stroke-dasharray: 0px, 999999px;"></circle>
-          </svg>
+        <div class="arts-cursor__wrapper">
+            <div class="arts-cursor__follower js-arts-cursor__follower">
+                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <circle class="arts-cursor__stroke-inner js-arts-cursor__stroke-inner" cx="25" cy="25" r="24" style="opacity: 0.6;"></circle>
+                    <circle class="arts-cursor__stroke-outer js-arts-cursor__stroke-outer" cx="25" cy="25" r="24" style="stroke-dashoffset: 252.327; stroke-dasharray: 0px, 999999px;"></circle>
+                </svg>
+            </div>
+            <div class="arts-cursor__arrows">
+                <div class="arts-cursor__arrow arts-cursor__arrow_up material-icons keyboard_arrow_up js-arts-cursor__arrow-up"></div>
+                <div class="arts-cursor__arrow arts-cursor__arrow_right material-icons keyboard_arrow_right js-arts-cursor__arrow-right"></div>
+                <div class="arts-cursor__arrow arts-cursor__arrow_down material-icons keyboard_arrow_down js-arts-cursor__arrow-down"></div>
+                <div class="arts-cursor__arrow arts-cursor__arrow_left material-icons keyboard_arrow_left js-arts-cursor__arrow-left"></div>
+            </div>
+            <div class="arts-cursor__wrapper-label">
+                <div class="arts-cursor__label js-arts-cursor__label"></div>
+            </div>
+            <div class="arts-cursor__wrapper-icon">
+                <div class="arts-cursor__icon js-arts-cursor__icon"></div>
+            </div>
         </div>
-        <!-- arrows-->
-        <div class="arts-cursor__arrows">
-          <div class="arts-cursor__arrow arts-cursor__arrow_up material-icons keyboard_arrow_up js-arts-cursor__arrow-up"></div>
-          <div class="arts-cursor__arrow arts-cursor__arrow_right material-icons keyboard_arrow_right js-arts-cursor__arrow-right"></div>
-          <div class="arts-cursor__arrow arts-cursor__arrow_down material-icons keyboard_arrow_down js-arts-cursor__arrow-down"></div>
-          <div class="arts-cursor__arrow arts-cursor__arrow_left material-icons keyboard_arrow_left js-arts-cursor__arrow-left"></div>
-        </div>
-        <!-- label holder-->
-        <div class="arts-cursor__wrapper-label">
-          <div class="arts-cursor__label js-arts-cursor__label"></div>
-        </div>
-        <!-- icon holder-->
-        <div class="arts-cursor__wrapper-icon">
-          <div class="arts-cursor__icon js-arts-cursor__icon"></div>
-        </div>
-      </div>
     </div>
-    <!-- - Cursor Follower -->
+    
     <!-- Mobile Loading Spinner -->
     <svg class="spinner d-lg-none" id="js-spinner" width="65px" height="65px" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
-      <circle class="spinner__path" fill="none" stroke-width="6" stroke-linecap="round" cx="33" cy="33" r="30"></circle>
+        <circle class="spinner__path" fill="none" stroke-width="6" stroke-linecap="round" cx="33" cy="33" r="30"></circle>
     </svg>
-    <!-- - Mobile Loading Spinner -->
+    
     <!-- Curtain AJAX Transition -->
     <div class="transition-curtain" id="js-page-transition-curtain"></div>
-    <!-- - Curtain AJAX Transition -->
+    
     <!-- PhotoSwipe Lightbox Container -->
     <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true" data-arts-theme-text="light">
-      <!-- background -->
-      <div class="pswp__bg"></div>
-      <!-- - background -->
-      <!-- slider wrapper -->
-      <div class="pswp__scroll-wrap">
-        <!-- slides holder (don't modify)-->
-        <div class="pswp__container">
-          <div class="pswp__item">
-            <div class="pswp__img pswp__img--placeholder"></div>
-          </div>
-          <div class="pswp__item"></div>
-          <div class="pswp__item"></div>
-        </div>
-        <!-- - slides holder (don't modify)-->
-        <!-- UI -->
-        <div class="pswp__ui pswp__ui--hidden">
-          <!-- top bar -->
-          <div class="pswp__top-bar">
-            <div class="pswp__counter"></div>
-            <button class="pswp__button pswp__button--close" title="Close (Esc)" data-arts-cursor="data-arts-cursor" data-arts-cursor-scale="1.4" data-arts-cursor-magnetic="data-arts-cursor-magnetic" data-arts-cursor-hide-native="true"></button>
-            <button class="pswp__button pswp__button--fs" title="Toggle fullscreen" data-arts-cursor="data-arts-cursor" data-arts-cursor-scale="1.4" data-arts-cursor-magnetic="data-arts-cursor-magnetic" data-arts-cursor-hide-native="true"></button>
-            <div class="pswp__preloader">
-              <div class="pswp__preloader__icn">
-                <div class="pswp__preloader__cut">
-                  <div class="pswp__preloader__donut"></div>
+        <div class="pswp__bg"></div>
+        <div class="pswp__scroll-wrap">
+            <div class="pswp__container">
+                <div class="pswp__item">
+                    <div class="pswp__img pswp__img--placeholder"></div>
                 </div>
-              </div>
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
             </div>
-          </div>
-          <!-- - top bar -->
-          <!-- left arrow -->
-          <div class="pswp__button pswp__button--arrow--left material-icons" data-arts-cursor="data-arts-cursor" data-arts-cursor-scale="1.7" data-arts-cursor-magnetic="data-arts-cursor-magnetic" data-arts-cursor-hide-native="true">keyboard_arrow_left</div>
-          <!-- - left arrow -->
-          <!-- right arrow -->
-          <div class="pswp__button pswp__button--arrow--right material-icons" data-arts-cursor="data-arts-cursor" data-arts-cursor-scale="1.7" data-arts-cursor-magnetic="data-arts-cursor-magnetic" data-arts-cursor-hide-native="true">keyboard_arrow_right</div>
-          <!-- - right arrow -->
-          <!-- slide caption holder (don't modify) -->
-          <div class="pswp__caption">
-            <div class="pswp__caption__center text-center"></div>
-          </div>
-          <!-- - slide caption holder (don't modify) -->
+            <div class="pswp__ui pswp__ui--hidden">
+                <div class="pswp__top-bar">
+                    <div class="pswp__counter"></div>
+                    <button class="pswp__button pswp__button--close" title="Close (Esc)" data-arts-cursor="data-arts-cursor" data-arts-cursor-scale="1.4" data-arts-cursor-magnetic="data-arts-cursor-magnetic" data-arts-cursor-hide-native="true"></button>
+                    <button class="pswp__button pswp__button--fs" title="Toggle fullscreen" data-arts-cursor="data-arts-cursor" data-arts-cursor-scale="1.4" data-arts-cursor-magnetic="data-arts-cursor-magnetic" data-arts-cursor-hide-native="true"></button>
+                    <div class="pswp__preloader">
+                        <div class="pswp__preloader__icn">
+                            <div class="pswp__preloader__cut">
+                                <div class="pswp__preloader__donut"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pswp__button pswp__button--arrow--left material-icons" data-arts-cursor="data-arts-cursor" data-arts-cursor-scale="1.7" data-arts-cursor-magnetic="data-arts-cursor-magnetic" data-arts-cursor-hide-native="true">keyboard_arrow_left</div>
+                <div class="pswp__button pswp__button--arrow--right material-icons" data-arts-cursor="data-arts-cursor" data-arts-cursor-scale="1.7" data-arts-cursor-magnetic="data-arts-cursor-magnetic" data-arts-cursor-hide-native="true">keyboard_arrow_right</div>
+                <div class="pswp__caption">
+                    <div class="pswp__caption__center text-center"></div>
+                </div>
+            </div>
         </div>
-        <!-- - UI -->
-      </div>
-      <!-- slider wrapper -->
     </div>
-    <!-- - PhotoSwipe Lightbox Container -->
+    
     <!-- VENDOR SCRIPTS -->
-    <script data-cfasync="false" src="cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="js/vendor.js"></script>
-    <!-- - VENDOR SCRIPTS -->
+    <script data-cfasync="false" src="cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+    <script src="js/vendor.js"></script>
     <!-- COMPONENTS -->
     <script src="js/components.js"></script>
     <script src="js/detect_browser.js"></script>
-    <!-- - COMPONENTS -->
-  <script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"version":"2024.11.0","token":"1f954960578d43a4938a3de8936429d5","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+    <script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"version":"2024.11.0","token":"1f954960578d43a4938a3de8936429d5","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
 </body>
-
-<!-- Mirrored from priyankaghosh.com/about by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 27 Oct 2025 07:47:00 GMT -->
 </html>
