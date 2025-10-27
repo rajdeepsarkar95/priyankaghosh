@@ -14,7 +14,7 @@
     
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,600,700" rel="stylesheet"/>
-    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Inter:ital,wght@0,100;0,200;0,300;0,400;0,500;0,700;1,300;1,400;1,500&amp;display=swap"/>
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Inter:ital,wght@0,100;0,200;0,300;0,400;0,500;0,700;1,300;1,400;1,500&display=swap"/>
     <link rel="stylesheet" type="text/css" href="css/vendor.css"/>
     <link rel="stylesheet" type="text/css" href="css/main.css"/>
     
@@ -51,26 +51,32 @@
 
         .contact-tooltip .tooltip-text {
             visibility: hidden;
-            width: 300px; /* Increased width to prevent text cutoff */
+            width: 300px;
             background-color: #333;
             color: #fff;
             text-align: center;
             border-radius: 6px;
             padding: 15px;
             position: absolute;
-            z-index: 1000; /* Higher z-index to ensure visibility */
-            bottom: 150%; /* Position above the text with more space */
+            z-index: 2000; /* Increased to avoid overlap with other elements */
+            bottom: 125%; /* Adjusted for better positioning */
             left: 50%;
             transform: translateX(-50%);
             opacity: 0;
-            transition: opacity 0.3s, visibility 0.3s;
-            white-space: nowrap; /* Prevent text wrapping */
-            font-size: 14px; /* Adjust font size for better readability */
+            transition: opacity 0.3s ease, visibility 0.3s ease;
+            white-space: normal; /* Allow text wrapping */
+            font-size: 14px;
+            pointer-events: none; /* Prevent tooltip from capturing mouse events */
         }
 
         .contact-tooltip:hover .tooltip-text {
             visibility: visible;
             opacity: 1;
+        }
+
+        /* Ensure parent container doesn’t clip tooltip */
+        .footer__inner {
+            overflow: visible !important;
         }
     </style>
 </head>
@@ -94,7 +100,7 @@
                         <ul class="menu js-menu">
                             <li><a href="index.html">Work</a></li>
                             <li><a href="about.html">About</a></li> 
-                            <li><a href="mailto:priyanka.ghosh0802@gmail.com">priyanka.ghosh0802@yahoo.com</a></li>
+                            <li><a href="mailto:priyanka.ghosh0802@yahoo.com">priyanka.ghosh0802@yahoo.com</a></li>
                         </ul>
                     </div>
                     <!-- mobile menu -->
